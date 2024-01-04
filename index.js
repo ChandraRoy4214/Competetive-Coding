@@ -1,1 +1,1 @@
-console.log('new job');
+console.log(1 < 1);
