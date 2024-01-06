@@ -4,7 +4,9 @@ let haystack = 'sadbutsad',
 (haystack = 'leetcode'), (needle = 'leeto');
 
 var strStr = function (haystack, needle) {
-  return haystack.indexOf(needle) || -1;
+  let firstOccurence = haystack.indexOf(needle);
+
+  return firstOccurence >= 0 ? firstOccurence : 0;
 };
 
 const result = strStr(haystack, needle);
