@@ -4,19 +4,18 @@ let nums = [3, 3],
   target = 6;
 
 function twoSum(arr, tar) {
-  let previouslySeenValues = {};
+  let seenValues = {};
 
   for (let i = 0; i < arr.length; i++) {
-    let neededValue = tar - arr[i];
-
-    let index2 = previouslySeenValues[neededValue];
+    let currVal = arr[i];
+    let neededValue = tar - currVal;
 
     console.log('i; ', i);
 
-    if (index2 != null) {
-      return [index2, i];
+    if (seenValues[neededValue]) {
+      return [i, seenValues[neededValue]];
     } else {
-      previouslySeenValues[arr[i]] = i;
+      seenValues[arr[i]] = i;
     }
   }
 }
